@@ -333,8 +333,6 @@ function autobuyUpgrades(layer){
 			buyUpg(layer, id) 
 }
 
-var timeDelay = 0
-
 function gameLoop(diff) {
 	if (isEndgame() || gameEnded){
 		gameEnded = 1
@@ -354,7 +352,6 @@ function gameLoop(diff) {
 			diff = limit
 	}
 	addTime(diff)
-	timeDelay = diff
 	player.points = player.points.add(tmp.pointGen.times(diff)).max(0)
 
 	for (let x = 0; x <= maxRow; x++){

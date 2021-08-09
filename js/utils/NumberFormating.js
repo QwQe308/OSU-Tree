@@ -97,7 +97,7 @@ function format(decimal, precision = 2, small=false) {
     if(decimal.lt("10^^^^5")){
       //console.log(egg(decimal.array[3]))
       // Hmmmmmm
-      let part1 = "G".repeat(egg(decimal.array[3])+ 1 - (decimal.gte("10^^^"+Number.MAX_SAFE_INTEGER)))
+      let part1 = "G".repeat(egg(decimal.array[3])+1 - (decimal.gte("10^^^"+Number.MAX_SAFE_INTEGER)))
       if(part1 != "G") {
         decimal.array.pop()
         return part1+format(decimal)
